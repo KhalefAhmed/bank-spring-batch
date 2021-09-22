@@ -23,6 +23,6 @@ public class JobRestController {
             System.out.println("...");
         }
 
-        jobExecution.getStatus();
+        return jobExecution.getStatus();
     }
 }
