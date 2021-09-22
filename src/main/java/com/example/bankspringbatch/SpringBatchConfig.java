@@ -74,7 +74,7 @@ public class SpringBatchConfig {
         fieldSetMapper.setTargetType(BankTransaction.class);
         lineMapper.setFieldSetMapper(fieldSetMapper);
         return lineMapper;
-
-
     }
+
+
 }
