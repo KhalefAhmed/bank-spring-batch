@@ -1,4 +1,4 @@
-transaction_id, account_number, transaction_date, transaction_number, transaction_type, transaction_amount
-5043545,2343,24/06/2021-09:44,12354,D,1000
-2425645,2344,25/06/2021-12:30,12345,C,1200.65
-5043545,2345,26/06/2021-01:04,12376,D,123.76
+transaction_id, account_number, transaction_date, transaction_type, transaction_amount
+1,2343,24/06/2021-09:44,D,1000
+2,2344,25/06/2021-12:30,C,1200.65
+3,2345,26/06/2021-01:04,D,123.76
