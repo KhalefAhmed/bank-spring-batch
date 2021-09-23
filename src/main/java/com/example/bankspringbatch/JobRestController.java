@@ -14,8 +14,9 @@ public class JobRestController {
 
     @Autowired private JobLauncher jobLauncher;
     @Autowired private Job job;
+    @Autowired private BankTransactionItemAnalyticsProcessor analyticsProcessor;
 
-    @GetMapping("start-job")
+    @GetMapping("/start-job")
     public BatchStatus load() throws Exception {
         Map<String, JobParameter> params = new HashMap<>();
         params.put("time",new JobParameter(System.currentTimeMillis()));
@@ -24,7 +25,14 @@ public class JobRestController {
         while (jobExecution.isRunning()) {
             System.out.println("...");
         }
-
         return jobExecution.getStatus();
+    }
+
+    @GetMapping("/analytics")
+    public Map<String,Double> analytics(){
+        Map<String, Double> map = new HashMap<>();
+        map.put("totalCredit",analyticsProcessor.getTotalCredit());
+        map.put("totalDebit",analyticsProcessor.getTotalDebit());
+        return map;
     }
 }
