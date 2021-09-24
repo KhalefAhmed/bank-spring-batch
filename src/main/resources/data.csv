@@ -2,3 +2,4 @@ transaction_id, account_number, transaction_date, transaction_type, transaction_
 1,2343,24/06/2021-09:44,D,1000
 2,2344,25/06/2021-12:30,C,1200.65
 3,2345,26/06/2021-01:04,D,123.76
+4,2346,27/06/2021-09:00,D,13.76
